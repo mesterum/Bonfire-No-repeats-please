@@ -2,8 +2,8 @@
 Return the number of total permutations of the provided string that don't have repeated consecutive letters. 
 For example, 'aab' should return 2 because it has 6 total permutations, but only 2 of them don't have the same letter (in this case 'a') repeating.
 ## Representation of input
-Because we are interested only in the number of total permutations of some string we must group the possible strings in categories. 'aabb' is in the same category as 'abab' or 'cffc', thus these strings are in the category `(2,2)` because the string is comprised of 2 identical letters and another 2 letters with the same value, no matter in what order are these 4 letters.
-This category can be noted as (2^2) too. This 2nd form I will use and I will represent it as an array `c=[,0,2]`. `c[0]==undefined` (or whatever) for my array to begin with index 1 and means that I have `0 of ones and 2 of twos`.
+Because we are interested only in the number of total permutations of some string we must group the possible strings in categories. 'aabb' is in the same category as 'abab' or 'cffc', which I could name it `(2,2)` because the string is comprised of 2 identical letters and another 2 letters equal to each other, no matter in what order are these 4 letters.
+This category can be noted as (2^2) too. This 2nd form I will use and I will represent it as an array `c=[,0,2]`. `c[0]==undefined` (or better a number) for my array to begin with index 1 and means that I have `0 of ones and 2 of twos`.
 
 *More examples:*
 - 'aaa' as (3) or (3^1)=`[,0,0,1]`,
